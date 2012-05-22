@@ -21,7 +21,7 @@
             <util:map>
                 <entry key="/demorpc/remoting/httpInvokerHelloService">
                     <bean class="org.springframework.remoting.httpinvoker.SimpleHttpInvokerServiceExporter">
-                        <property name="service" ref="httpInvokerHelloServiceImpl" />
+                        <property name="service" ref="commonHelloServiceImpl" />
                         <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
                     </bean>
                 </entry>

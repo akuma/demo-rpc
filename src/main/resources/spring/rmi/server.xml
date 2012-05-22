@@ -17,8 +17,8 @@
     <context:component-scan base-package="com.shunwang.starmedia.demo.rpc.*" />
 
     <bean id="rmiHelloService" class="org.springframework.remoting.rmi.RmiServiceExporter">
-        <property name="service" ref="springRmiHelloServiceImpl" />
-        <property name="serviceName" value="HelloService" />
+        <property name="service" ref="commonHelloServiceImpl" />
+        <property name="serviceName" value="springRmiHelloService" />
         <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
     </bean>
 
