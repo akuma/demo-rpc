@@ -2,7 +2,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.shunwang.starmedia.demo.rpc</groupId>
+    <groupId>demo.rpc</groupId>
     <artifactId>demo-rpc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -166,10 +166,22 @@
             <version>${cxf.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http-jetty</artifactId>
+            <version>${cxf.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.geronimo.specs</groupId>
+                    <artifactId>geronimo-servlet_2.5_spec</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
     </dependencies>
 
     <build>
-        <finalName>${project.artifactId}-${project.version}-r${svn.revision}-${package.qualifier}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
 
         <resources>
             <resource>
@@ -216,10 +228,7 @@
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                         <manifestEntries>
-                            <Implementation-Qualifier>${package.qualifier}</Implementation-Qualifier>
                             <Implementation-Timestamp>${maven.build.timestamp}</Implementation-Timestamp>
-                            <Implementation-Revision>r${SVN_REVISION}</Implementation-Revision>
-                            <SVN-Url>${SVN_URL}</SVN-Url>
                         </manifestEntries>
                     </archive>
                 </configuration>
@@ -248,18 +257,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <repository>
-            <id>nexus-release</id>
-            <name>Starmedia Release Repository</name>
-            <url>http://192.168.24.249:8081/nexus/content/repositories/Starmedia-Release</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshot</id>
-            <name>Starmedia Snapshot Repository</name>
-            <url>http://192.168.24.249:8081/nexus/content/repositories/Starmedia-Snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
