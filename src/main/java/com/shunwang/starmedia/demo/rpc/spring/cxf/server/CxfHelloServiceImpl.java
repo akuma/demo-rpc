@@ -10,6 +10,8 @@ import javax.jws.WebService;
 import org.springframework.stereotype.Component;
 
 /**
+ * Apache CXF 的服务提供类。
+ * 
  * @author wj.huang
  * @version $Revision: 1.0 $, $Date: 2012-5-21 下午2:17:37 $
  */
