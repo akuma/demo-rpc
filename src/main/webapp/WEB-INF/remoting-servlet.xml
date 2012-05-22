@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="rmiBasicService" class="org.springframework.remoting.rmi.RmiServiceExporter" abstract="true" />
+
+    <bean id="httpInvokerBasicService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"
+        abstract="true" />
+
+    <bean id="springRmiHelloService" parent="rmiBasicService">
+        <property name="service" ref="springRmiHelloServiceImpl" />
+        <property name="serviceName" value="springRmiHelloService" />
+        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+    </bean>
+
+    <bean name="/httpInvokerHelloService" parent="httpInvokerBasicService">
+        <property name="service" ref="httpInvokerHelloServiceImpl" />
+        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+    </bean>
+
+</beans>
