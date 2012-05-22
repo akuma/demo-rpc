@@ -8,7 +8,7 @@ package com.shunwang.starmedia.demo.rpc.spring.rmi.server;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Spring RMI 的服务提供类。
+ * Spring RMI 的服务器端类。
  * 
  * @author wj.huang
  * @version $Revision: 1.0 $, $Date: 2012-5-18 下午6:08:57 $

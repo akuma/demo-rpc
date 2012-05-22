@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import com.shunwang.starmedia.demo.rpc.common.HelloService;
 
 /**
+ * Spring HttpInvoker 的服务提供类。
+ * 
  * @author wj.huang
  * @version $Revision: 1.0 $, $Date: 2012-5-21 上午10:18:13 $
  */

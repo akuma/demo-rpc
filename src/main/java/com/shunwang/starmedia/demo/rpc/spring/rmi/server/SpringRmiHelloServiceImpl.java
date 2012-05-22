@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import com.shunwang.starmedia.demo.rpc.common.HelloService;
 
 /**
+ * Spring RMI 的服务提供类。
+ * 
  * @author wj.huang
  * @version $Revision: 1.0 $, $Date: 2012-5-18 下午5:06:19 $
  */
