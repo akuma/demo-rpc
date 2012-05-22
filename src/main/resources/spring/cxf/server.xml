@@ -16,14 +16,9 @@
         http://cxf.apache.org/jaxws
         http://cxf.apache.org/schemas/jaxws.xsd">
 
-    <!-- 最简洁的配置方式 -->
-    <jaxws:client id="helloService" serviceClass="com.shunwang.starmedia.demo.rpc.spring.cxf.server.CxfHelloService"
-        address="http://localhost/demorpc/services/cxfHelloService" />
+    <context:annotation-config />
+    <context:component-scan base-package="com.shunwang.starmedia.demo.rpc.*" />
 
-    <!-- 稍微复杂点的配置方式 -->
-    <!-- <bean id="helloService" class="com.shunwang.starmedia.demo.rpc.spring.cxf.server.CxfHelloService" factory-bean="clientFactory" 
-        factory-method="create" /> <bean id="clientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean"> <property name="serviceClass" 
-        value="com.shunwang.starmedia.demo.rpc.spring.cxf.server.CxfHelloService" /> <property name="address" value="http://localhost/demorpc/services/cxfHelloService" 
-        /> </bean> -->
+    <jaxws:endpoint address="http://localhost/demorpc/services/cxfHelloService" implementor="#cxfHelloServiceImpl" />
 
 </beans>
