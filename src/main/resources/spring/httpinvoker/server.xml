@@ -16,9 +16,18 @@
     <context:annotation-config />
     <context:component-scan base-package="com.shunwang.starmedia.demo.rpc.*" />
 
-    <bean id="httpInvokerHelloService" class="org.springframework.remoting.httpinvoker.SimpleHttpInvokerServiceExporter">
-        <property name="service" ref="httpInvokerHelloServiceImpl" />
-        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+    <bean id="httpServer" class="org.springframework.remoting.support.SimpleHttpServerFactoryBean">
+        <property name="contexts">
+            <util:map>
+                <entry key="/demorpc/remoting/httpInvokerHelloService">
+                    <bean class="org.springframework.remoting.httpinvoker.SimpleHttpInvokerServiceExporter">
+                        <property name="service" ref="httpInvokerHelloServiceImpl" />
+                        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+                    </bean>
+                </entry>
+            </util:map>
+        </property>
+        <property name="port" value="80" />
     </bean>
 
 </beans>
