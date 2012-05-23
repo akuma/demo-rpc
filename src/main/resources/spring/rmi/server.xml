@@ -14,12 +14,12 @@
         http://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:annotation-config />
-    <context:component-scan base-package="com.shunwang.starmedia.demo.rpc.*" />
+    <context:component-scan base-package="demo.rpc.*" />
 
     <bean id="rmiHelloService" class="org.springframework.remoting.rmi.RmiServiceExporter">
         <property name="service" ref="commonHelloServiceImpl" />
         <property name="serviceName" value="springRmiHelloService" />
-        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+        <property name="serviceInterface" value="demo.rpc.common.HelloService" />
     </bean>
 
 </beans>

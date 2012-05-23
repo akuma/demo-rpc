@@ -14,6 +14,6 @@
         http://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:annotation-config />
-    <context:component-scan base-package="com.shunwang.starmedia.demo.rpc" />
+    <context:component-scan base-package="demo.rpc" />
 
 </beans>

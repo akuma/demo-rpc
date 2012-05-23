@@ -15,7 +15,7 @@
 
     <bean id="helloService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
         <property name="serviceUrl" value="http://localhost/demorpc/remoting/httpInvokerHelloService" />
-        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+        <property name="serviceInterface" value="demo.rpc.common.HelloService" />
     </bean>
 
 </beans>

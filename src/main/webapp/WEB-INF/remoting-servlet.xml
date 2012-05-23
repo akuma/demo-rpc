@@ -11,12 +11,12 @@
     <bean id="springRmiHelloService" parent="rmiBasicService">
         <property name="service" ref="commonHelloServiceImpl" />
         <property name="serviceName" value="springRmiHelloService" />
-        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+        <property name="serviceInterface" value="demo.rpc.common.HelloService" />
     </bean>
 
     <bean name="/httpInvokerHelloService" parent="httpInvokerBasicService">
         <property name="service" ref="commonHelloServiceImpl" />
-        <property name="serviceInterface" value="com.shunwang.starmedia.demo.rpc.common.HelloService" />
+        <property name="serviceInterface" value="demo.rpc.common.HelloService" />
     </bean>
 
 </beans>

@@ -17,13 +17,13 @@
         http://cxf.apache.org/schemas/jaxws.xsd">
 
     <!-- 最简洁的配置方式 -->
-    <jaxws:client id="helloService" serviceClass="com.shunwang.starmedia.demo.rpc.spring.cxf.server.CxfHelloService"
+    <jaxws:client id="helloService" serviceClass="demo.rpc.spring.cxf.server.CxfHelloService"
         address="http://localhost/demorpc/services/cxfHelloService" />
 
     <!-- 稍微复杂点的配置方式 -->
-    <!-- <bean id="helloService" class="com.shunwang.starmedia.demo.rpc.spring.cxf.server.CxfHelloService" factory-bean="clientFactory" 
+    <!-- <bean id="helloService" class="demo.rpc.spring.cxf.server.CxfHelloService" factory-bean="clientFactory" 
         factory-method="create" /> <bean id="clientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean"> <property name="serviceClass" 
-        value="com.shunwang.starmedia.demo.rpc.spring.cxf.server.CxfHelloService" /> <property name="address" value="http://localhost/demorpc/services/cxfHelloService" 
+        value="demo.rpc.spring.cxf.server.CxfHelloService" /> <property name="address" value="http://localhost/demorpc/services/cxfHelloService" 
         /> </bean> -->
 
 </beans>

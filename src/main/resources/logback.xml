@@ -10,7 +10,7 @@
     </appender>
 
     <logger name="org.springframework" level="WARN" />
-    <logger name="com.shunwang.starmedia" level="DEBUG" />
+    <logger name="demo.rpc" level="DEBUG" />
 
     <root level="ERROR">
         <appender-ref ref="Console" />
