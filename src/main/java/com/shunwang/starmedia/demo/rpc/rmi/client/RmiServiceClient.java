@@ -13,6 +13,8 @@ import java.rmi.registry.Registry;
 import com.shunwang.starmedia.demo.rpc.rmi.server.RmiHelloService;
 
 /**
+ * 调用 RMI 服务的客户端类。
+ * 
  * @author wj.huang
  * @version $Revision: 1.0 $, $Date: 2012-5-18 下午4:44:33 $
  */
