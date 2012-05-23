@@ -6,7 +6,7 @@
     <artifactId>demo-rpc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <description>A demo for demonstrating Remote procedure call.</description>
+    <description>A demo for demonstrating Remote Procedure Call.</description>
 
     <properties>
         <maven.compile.source>1.6</maven.compile.source>
