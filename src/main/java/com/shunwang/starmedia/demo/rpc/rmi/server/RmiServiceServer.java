@@ -11,6 +11,8 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
+ * 提供 RMI 服务的服务端类。
+ * 
  * @author wj.huang
  * @version $Revision: 1.0 $, $Date: 2012-5-18 下午4:41:48 $
  */
