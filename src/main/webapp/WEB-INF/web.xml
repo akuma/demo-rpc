@@ -53,7 +53,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>rest</servlet-name>
-        <url-pattern>/rest/*</url-pattern>
+        <url-pattern>/rest/</url-pattern>
     </servlet-mapping>
 
     <!-- CXF WebServices -->
